@@ -1,3 +1,2 @@
-
-
-pip3 install torch torchvision
+Check requirements.txt for any installations needed to import the modules.
+Make sure you have pip or pip3 pkg manager or just install pip as well. Later on I can change the file to run installation on one pip command.
