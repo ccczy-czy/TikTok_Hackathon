@@ -1,7 +1,12 @@
--pip3 install torch torchvision
--!pip3 install transformers datasets evaluate accelerate
-pip3 install ftfy regex tqdm
-pip3 install numpy
-pip3 install git+https://github.com/openai/CLIP.git
-pip3 install pillow
-pip3 install IPython
+torch 
+torchvision
+transformers 
+datasets 
+evaluate 
+accelerate
+ftfy 
+regex 
+tqdm
+numpy
+#git+https://github.com/openai/CLIP.git
+pillow

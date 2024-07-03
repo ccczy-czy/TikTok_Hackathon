@@ -5,12 +5,16 @@ from PIL import Image
 #from IPython.display import display
 
 
+"""
+This is first test model. We use clip model ViT-B/32.  We use HUGGINGFACE transformers library here to integrate CLIP rather than CLIP directly
 
+
+"""
 
 from transformers import CLIPVisionModelWithProjection, CLIPProcessor
 
-model_id = "openai/clip-vit-base-patch32"
-model = CLIPVisionModelWithProjection.from_pretrained(model_id, return_dict=False)
+model_id = "openai/clip-vit-base-patch32" #huggingface model id for CLIP model
+model = CLIPVisionModelWithProjection.from_pretrained(model_id, return_dict=False)  #
 processor = CLIPProcessor.from_pretrained(model_id)
 model.eval()
 

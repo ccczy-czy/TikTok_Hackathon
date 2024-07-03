@@ -2,8 +2,6 @@ import torch
 import numpy as np
 import clip
 from PIL import Image
-#import requests
-#from IPython.display import display
 
 
 from transformers import CLIPTextModelWithProjection, CLIPTokenizerFast
@@ -24,21 +22,17 @@ traced_model.save("traced_clip_text_model.pt")
 
 
 #example of how we use and load the TextEncoder somewhere else
-
+#make sure you have the trace models saved, or just rerun the encoder files
 loaded_traced_model = torch.jit.load("traced_clip_text_model.pt")
 print("Model loaded successfully.")
-
-
-
 # Example input text
 example_text = "a photo of a cat"
-
 # Tokenize the input text
 example_input = tokenizer(example_text, return_tensors="pt")['input_ids']
-
 # Run inference using the loaded traced model
 with torch.no_grad():
     output = loaded_traced_model(example_input)
 
 print("Inference completed successfully.")
 print("Model output:", output)
+
