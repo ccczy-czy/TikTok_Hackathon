@@ -1,4 +1,9 @@
-Check requirements.txt for any installations needed to import the modules.
-Make sure you have pip or pip3 pkg manager or just install pip as well. Later on I can change the file to run installation on one pip command.
+Its best to create a python env (venv) so downloading all this does not mess up any other python projects you have going on. 
 
-The images in the assets are old images I had downloaded on my laptop. I didnt want to download new ones. I'll update with a larger img url dataset once I figure out how to compare the text and image encodings. 
+pip3 install -r requirements.txt
+to install all necessary dependencies. 
+
+
+
+NOTES: 
+If testing, i have added the actual loaded model files to the .gitignore file since they are too big for github. So for now you have to run the ImageEncoder.py and the TextEncoder.py to load them in you local machine every time. Later on we can load them from some sotrage system (s3?)
